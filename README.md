@@ -5,4 +5,5 @@ Test Plan and Automation project for Guild
 
 ```bash
 npm
+typescript
 ```
