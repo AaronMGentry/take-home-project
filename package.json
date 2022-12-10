@@ -1,0 +1,23 @@
+{
+  "name": "take-home-project",
+  "version": "1.0.0",
+  "description": "Test Plan and Automation project for Guild",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronMGentry/take-home-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronMGentry/take-home-project/issues"
+  },
+  "homepage": "https://github.com/AaronMGentry/take-home-project#readme",
+  "devDependencies": {
+    "cypress": "^12.0.2"
+  }
+}
