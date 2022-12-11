@@ -21,10 +21,11 @@ describe('Test File Upload',() => {
                 cy.get('.signin-button').click();
             }
         });
-
         cy.url().should('include','personal');
-        
-        
+
+        cy.get('css=.dig-Button--primary > .dig-Button-content').click();
+        cy.get('css=.dig-Menu-row:nth-child(1) .dig-Menu-row-title').click();
+
         cy.fixture('ClassGrades.csv')
         .then(fileContent => {
             cy.get('input[type="file"]')
