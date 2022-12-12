@@ -1,25 +1,16 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import user from '../fixtures/users.json' 
+
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit("/");
+    cy.get("[href='/login']").click();
+    cy.get("[name='login_email']").type(user.email || secrets.EMAIL);
+    cy.get("[name='login_password']").type(user.password || secrets.PASSWORD);
+    cy.get("body").then($body => {
+        if ($body.find("[data-uxa-log='login_form_submit_button']").length > 0) {
+            cy.get("[data-uxa-log='login_form_submit_button']").click();
+        }
+            else {
+                cy.get('.signin-button').click();
+            }
+    });
+});
