@@ -13,8 +13,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          name: Install npm
-          run: npm install
+          start: npm install
           start: npx cypress run --record --reporter json
           record: true
           parallel: false
