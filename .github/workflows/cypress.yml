@@ -10,11 +10,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install
-        run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
+          Install: npm install
           start: npx cypress run --record --reporter json
           record: true
           parallel: false
