@@ -1,4 +1,5 @@
-import user from '../fixtures/users.json' 
+import user from '../fixtures/users.json';
+import secrets from Cypress.config.env;
 
 Cypress.Commands.add('login', (email, password) => {
     cy.visit("/");
