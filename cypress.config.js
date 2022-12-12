@@ -15,8 +15,4 @@ module.exports = {
     baseUrl: 'https://www.dropbox.com',
     specPattern: 'cypress/test/**/*.cy.{js,jsx,ts,tsx}',
   },
-  "env": {
-    "EMAIL": '${{ secrets.EMAIL }}',
-    "PASSWORD": '${{ secrets.PASSWORD }}',
-  }
 }
