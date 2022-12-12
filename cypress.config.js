@@ -1,7 +1,7 @@
 const { defineConfig } = require('cypress')
 
-module.exports = defineConfig({
-  projectId: 'uej4hh',
+module.exports = {
+  projectId: '3py3zt',
   defaultCommandTimeout: 20000,
   execTimeout: 60000,
   pageLoadTimeout: 300000000,
@@ -16,4 +16,8 @@ module.exports = defineConfig({
     baseUrl: 'https://www.dropbox.com',
     specPattern: 'cypress/test/**/*.cy.{js,jsx,ts,tsx}',
   },
-})
+  "env": {
+    email: '${{ secrets.EMAIL }}',
+    password: '${{ secrets.PASSWORD }}',
+  }
+}
