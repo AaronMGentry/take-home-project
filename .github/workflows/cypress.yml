@@ -15,7 +15,7 @@ jobs:
         with:
           name: Install npm
           run: npm install
-          start: cypress run --record --reporter json
+          start: npx cypress run --record --reporter json
           record: true
           parallel: false
         env:

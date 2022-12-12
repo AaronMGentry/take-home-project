@@ -7,7 +7,6 @@ module.exports = {
   pageLoadTimeout: 300000000,
   requestTimeout: 20000,
   responseTimeout: 30000,
-  screenshotsFolder: 'cypress/screenshots',
   taskTimeout: 60000,
   viewportHeight: 1080,
   viewportWidth: 1920,
